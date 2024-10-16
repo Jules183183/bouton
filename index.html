@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERIKA 🇩🇪🥸✋卐</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        #myButton {
+            background-color: red;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #myButton:active {
+            transform: scale(0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #myButton:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="myButton">Click On</button>
+    <audio id="myAudio" src="mon_fichier_audio.mp3" loop></audio>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            // Délai de 5 secondes avant la lecture audio
+            setTimeout(function() {
+                document.getElementById('myAudio').play();
+            }, 400);
+        });
+    </script>
+
+</body>
+</html>
